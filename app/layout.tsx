@@ -7,9 +7,9 @@ import Footer from './components/Footer'
   ;
 const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
-  title: 'Baittulhuzan - Islamic Education Center',
-  description: 'Islamic education and community center in Copenhagen, Denmark',
-  keywords: 'Islamic center, mosque, education, prayer times, Copenhagen, Denmark',
+  title: 'Baittulhuzan ',
+  description: 'Islamic community center in Copenhagen, Denmark',
+  keywords: 'Islamic center, Shia, Azadari, Copenhagen, Denmark',
 };
 
 export default function RootLayout({
