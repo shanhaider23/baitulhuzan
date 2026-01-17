@@ -10,6 +10,15 @@ export const metadata: Metadata = {
   title: 'Baittulhuzan ',
   description: 'Islamic community center in Copenhagen, Denmark',
   keywords: 'Islamic center, Shia, Azadari, Copenhagen, Denmark',
+  authors: [{ name: 'Baittulhuzan', url: 'https://baitulhuzan.dk' }],
+  creator: 'Baittulhuzan',
+  manifest: "/manifest.json",
+
+
+  icons: [
+    { rel: "apple-touch-icon", url: "android-chrome-192x192" },
+    { rel: "icon", url: "android-chrome-512x512" },
+  ],
 };
 
 export default function RootLayout({
