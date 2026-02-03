@@ -11,9 +11,9 @@ export default function ContactPage() {
     ]
 
     return (
-        <section className="min-h-screen bg-gradient-to-br from-black via-[#0f1a17] to-[#1e2c28] py-24 px-6 md:px-16">
+        <section className="min-h-screen bg-linear-to-br from-black via-[#0f1a17] to-[#1e2c28] px-6 md:px-16 py-10 md:py-28">
             <div className="max-w-7xl mx-auto text-center mb-16">
-                <h1 className="text-5xl md:text-6xl font-bold text-white tracking-[0.25em]">
+                <h1 className="text-white text-2xl font-bold md:text-6xl tracking-[0.35em] animate-right mb-16 text-center">
                     CONTACT US
                 </h1>
 
@@ -41,7 +41,7 @@ export default function ContactPage() {
 
                     {/* Address */}
                     <div className="flex items-start space-x-4 mb-8">
-                        <div className="bg-primary w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                        <div className="bg-primary w-12 h-12 rounded-full flex items-center justify-center shrink-0">
                             <MapPin className="text-white" size={24} />
                         </div>
                         <div>
@@ -54,7 +54,7 @@ export default function ContactPage() {
                     <div className="space-y-4">
                         {contacts.map((c, idx) => (
                             <div key={idx} className="flex items-start space-x-4">
-                                <div className="bg-primary w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                                <div className="bg-primary w-12 h-12 rounded-full flex items-center justify-center shrink-0">
                                     <Phone className="text-white" size={24} />
                                 </div>
                                 <div>

@@ -5,15 +5,13 @@ export default async function EventsPage() {
     const images = await getLatestEventImages()
 
     return (
-        <section className="min-h-screen bg-linear-to-br from-black via-[#0f1a17] to-[#1e2c28] px-6 md:px-16 py-28">
+        <section className="min-h-screen bg-linear-to-br from-black via-[#0f1a17] to-[#1e2c28] px-6 md:px-16 py-10 md:py-28">
             {/* Heading */}
-            <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-20 overflow-hidden">
-                <h1 className="text-white text-4xl md:text-6xl tracking-[0.35em] animate-left">
-                    UPCOMING
+            <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-5  md:mb-20 overflow-hidden">
+                <h1 className="text-white text-2xl font-bold md:text-6xl tracking-[0.35em] animate-left">
+                    UPCOMING EVENTS
                 </h1>
-                <h2 className="text-white text-4xl md:text-6xl tracking-[0.35em] animate-right">
-                    EVENTS
-                </h2>
+
             </div>
 
             {/* Images */}
