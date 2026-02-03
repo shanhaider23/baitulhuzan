@@ -3,6 +3,9 @@ import withPWA from "next-pwa";
 
 const nextConfig: NextConfig = {
   // your Next.js config options here
+  turbopack: {
+    root: __dirname,
+  },
 };
 
 export default withPWA({
