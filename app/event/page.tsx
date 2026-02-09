@@ -16,7 +16,7 @@ export default async function EventsPage() {
 
             {/* Images */}
             <div className="flex justify-center">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl w-full animate-right">
+                <div className="flex justify-center gap-8 flex-wrap items-center w-full animate-right">
                     {images.length === 0 && (
                         <p className="text-white/60 text-center col-span-full">
                             No events uploaded yet.

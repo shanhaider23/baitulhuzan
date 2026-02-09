@@ -44,16 +44,7 @@ export default function CommunityPage() {
                     Social Media & Gallery
                 </h1>
                 <div className="relative w-full overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
-                    <div className="relative w-full pb-[56.25%]">
-                        <iframe
-                            className="absolute inset-0 h-full w-full"
-                            src="https://www.youtube.com/embed/Yzw8lO-jSwM?autoplay=1&mute=1&loop=1&playlist=Yzw8lO-jSwM&rel=0&modestbranding=1&playsinline=1"
-                            title="YouTube video"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowFullScreen
-                        />
-                    </div>
+
                     <div className="absolute inset-0 bg-black/30" />
                     <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
                         <div className="inline-flex items-center gap-3 rounded-full bg-black/60 px-4 py-2 text-white">
@@ -71,7 +62,53 @@ export default function CommunityPage() {
 
                 {/* Facebook and YouTube Links */}
                 <div className="flex flex-col md:flex-row gap-12 justify-center m-auto mt-16 max-w-6xl">
+
+                    <div className="relative w-full max-w-4xl mx-auto h-125 md:h-140  rounded-2xl overflow-hidden bg-[#1c1c1c] border border-gray-700 shadow-2xl">
+                        {/* Image */}
+                        <Image
+                            src={galleryImages[current]}
+                            alt={`Event ${current + 1}`}
+                            fill
+                            className="object-contain transition-all duration-700"
+                        />
+
+                        {/* Left arrow */}
+                        <button
+                            onClick={prevSlide}
+                            className="absolute top-1/2 left-4 -translate-y-1/2 bg-black/40 hover:bg-black/60 p-3 rounded-full text-white transition"
+                        >
+                            <ChevronLeft size={32} />
+                        </button>
+
+                        {/* Right arrow */}
+                        <button
+                            onClick={nextSlide}
+                            className="absolute top-1/2 right-4 -translate-y-1/2 bg-black/40 hover:bg-black/60 p-3 rounded-full text-white transition"
+                        >
+                            <ChevronRight size={32} />
+                        </button>
+
+                        {/* Indicator dots */}
+                        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3">
+                            {galleryImages.map((_, idx) => (
+                                <span
+                                    key={idx}
+                                    className={`w-3 h-3 rounded-full transition-all ${idx === current ? 'bg-white' : 'bg-white/30'
+                                        }`}
+                                />
+                            ))}
+                        </div>
+                    </div>
+
                     {/* Facebook Link */}
+
+                </div>
+
+            </section>
+            {/* Picture Gallery */}
+
+            <section className='bg-linear-to-br from-black via-[#0f1a17] to-[#1e2c28] px-6 md:px-16 py-10'>
+                <div className="flex flex-col md:flex-row gap-12 justify-center m-auto mt-16 max-w-6xl">
                     <div className="w-full md:w-1/4 flex flex-col items-center justify-center p-8 rounded-xl shadow-lg border border-white/10 bg-black/40 hover:bg-black/60 transition">
                         <svg className="w-16 h-16 text-blue-500 mb-4" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
@@ -104,51 +141,6 @@ export default function CommunityPage() {
                         >
                             Visit YouTube Channel
                         </a>
-                    </div>
-                </div>
-
-            </section>
-            {/* Picture Gallery */}
-
-            <section className='bg-linear-to-br from-black via-[#0f1a17] to-[#1e2c28] px-6 md:px-16 py-10'>
-                <h1 className="text-white text-2xl font-bold md:text-6xl tracking-[0.35em] animate-right mb-16 text-center">
-                    Photo Gallery
-                </h1>
-
-                <div className="relative w-full max-w-4xl mx-auto h-125 md:h-140  rounded-2xl overflow-hidden bg-[#1c1c1c] border border-gray-700 shadow-2xl">
-                    {/* Image */}
-                    <Image
-                        src={galleryImages[current]}
-                        alt={`Event ${current + 1}`}
-                        fill
-                        className="object-contain transition-all duration-700"
-                    />
-
-                    {/* Left arrow */}
-                    <button
-                        onClick={prevSlide}
-                        className="absolute top-1/2 left-4 -translate-y-1/2 bg-black/40 hover:bg-black/60 p-3 rounded-full text-white transition"
-                    >
-                        <ChevronLeft size={32} />
-                    </button>
-
-                    {/* Right arrow */}
-                    <button
-                        onClick={nextSlide}
-                        className="absolute top-1/2 right-4 -translate-y-1/2 bg-black/40 hover:bg-black/60 p-3 rounded-full text-white transition"
-                    >
-                        <ChevronRight size={32} />
-                    </button>
-
-                    {/* Indicator dots */}
-                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3">
-                        {galleryImages.map((_, idx) => (
-                            <span
-                                key={idx}
-                                className={`w-3 h-3 rounded-full transition-all ${idx === current ? 'bg-white' : 'bg-white/30'
-                                    }`}
-                            />
-                        ))}
                     </div>
                 </div>
 
