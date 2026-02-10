@@ -5,7 +5,7 @@ import { Phone, MapPin } from 'lucide-react'
 export default function ContactPage() {
     const contacts = [
         { name: 'Syed Ibne Ali', phone: '28947632' },
-        { name: 'Syed Athar Shabbit', phone: '50389851' },
+        { name: 'Syed Athar Shabbir', phone: '50389851' },
         { name: 'Syed Sajid Abbas', phone: '60244786' },
         { name: 'Qamar Zaman', phone: '23839335' },
     ]
